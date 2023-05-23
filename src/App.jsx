@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import "./app.css";
+
 import About from "./Routes/About";
 import Project from "./Routes/Project";
 import Contact from "./Routes/Contact";
