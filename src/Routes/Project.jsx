@@ -3,19 +3,16 @@ import React,{useEffect,useState} from "react";
 const Project  = () =>{
     return(<>
     <div className="pt-5">
-        {/* <img src="../public/betrino.png" width="600" />
-        <img src="../public/squadGame.png" width="600" />
-        <img src="../public/buildResume.png" width="600" />
-        <img src="../public/calculator.png" width="600" />
-        <img src="../public/weather.png" width="600" /> */}
+
+        <h4 className="text-light mt-5 mb-5">And here you can see some examples of my work</h4>
 <div className="container"> 
       <div className="icon-image">
         <div className="icon">
-          <img src="../public/buildResume.png" alt="" />
+          <img src="/buildResume.PNG" alt="" />
         </div>
         <div className="hover-image one">
           <div className="img">
-            <img src="../public/buildResume.png" alt="" />
+            <img src="/buildResume.PNG" alt="" />
           </div>
           <div className="content">
             <div className="details">
@@ -27,11 +24,11 @@ const Project  = () =>{
       </div>
       <div className="icon-image">
         <div className="icon">
-          <img src="../public/weather.png" alt="" />
+          <img src="/weather.PNG" alt="" />
         </div>
         <div className="hover-image one">
           <div className="img">
-            <img src="../public/weather.png" alt="" />
+            <img src="/weather.PNG" alt="" />
           </div>
           <div className="content">
             <div className="details">
@@ -43,11 +40,11 @@ const Project  = () =>{
       </div>
       <div className="icon-image">
         <div className="icon">
-          <img src="../public/calculator.png" alt="" />
+          <img src="/calculator.PNG" alt="" />
         </div>
         <div className="hover-image one">
           <div className="img">
-            <img src="../public/calculator.png" alt="" />
+            <img src="/calculator.PNG" alt="" />
           </div>
           <div className="content">
             <div className="details">
@@ -59,11 +56,11 @@ const Project  = () =>{
       </div>
       <div className="icon-image">
         <div className="icon">
-          <img src="../public/betrino.png" alt="" />
+          <img src="/betrino.PNG" alt="" />
         </div>
         <div className="hover-image one">
           <div className="img">
-            <img src="../public/betrino.png" alt="" />
+            <img src="/betrino.PNG" alt="" />
           </div>
           <div className="content">
             <div className="details">
@@ -75,11 +72,11 @@ const Project  = () =>{
       </div>
       <div className="icon-image last">
         <div className="icon">
-          <img src="../public/squadGame.png" alt="" />
+          <img src="/squadGame.PNG" alt="" />
         </div>
         <div className="hover-image one">
           <div className="img">
-            <img src="../public/squadGame.png" alt="" />
+            <img src="/squadGame.PNG" alt="" />
           </div>
           <div className="content">
             <div className="details">

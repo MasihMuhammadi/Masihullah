@@ -11,7 +11,7 @@ const Resume = () =>{
                 <h2>BACHELOR OF COMPUTER SCIENCE</h2>
                  <p> Kabul, Afghanistan</p>
                  <p>2019 - present</p>
-                 <img src="../public/laptop teaching.png"    width="300" height="300" />
+                 <img src="/laptop teaching.png"    width="300" height="300" />
 
                 </li>
               </ul>

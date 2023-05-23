@@ -4,22 +4,24 @@ import Navbar from "../assets/Navbar";
 import TypingAnimation from "../TypingAnimation";
 
 const Home = () => {
-  const [myPhoto, setMyPhoto] = useState("../public/smile.png");
+  const [myPhoto, setMyPhoto] = useState("/smile.png");
 
   const showMyFace = () => {
-    setMyPhoto("../public/sticker.png");
+    setMyPhoto("/sticker.png");
   };
 
   const hideMyFace = () => {
-    setMyPhoto("../public/smile.png");
+    setMyPhoto("/smile.png");
+   
   };
 
   return (
     <>
       <div className="row align-items-center home">
         <div className="col-lg-6 order-lg-1">
+         
           <img
-            src={myPhoto}
+            src={ myPhoto}
             width="500"
             height="500"
             onMouseOver={showMyFace}
@@ -35,6 +37,7 @@ const Home = () => {
             <p className="bio">
               <TypingAnimation />
             </p>
+            <p>I am Full stack web developer with 1+ year experience in Front-end web development</p>
           </div>
         </div>
       </div>
