@@ -102,7 +102,7 @@ const Skills = () => {
   }, [php]);
 
 
-    return (<>
+    return (<div className="overflow-x-sm-hidden">
     <div className="row pt-5 w-100 text-light fw-bold " id='skills '>
         <div className="col ">
             <img src="/read.png" width="400" />
@@ -137,7 +137,7 @@ const Skills = () => {
 
         </div>
     </div>
-      </>
+      </div>
     );
   };
 

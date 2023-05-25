@@ -3,7 +3,7 @@ import React,{useEffect,useState} from "react";
 const About  = () =>{
     return(<>
     <div id="about" className="row ">
-        <h5>Do You wan't to know more about About me..?</h5>
+        <h5>Do You wan't to know more About me..?</h5>
             <div class="col-sm-12 col-md-4 mt-4 mb-4">
             <div className="cards " >
                     <img src='/education.png'  />

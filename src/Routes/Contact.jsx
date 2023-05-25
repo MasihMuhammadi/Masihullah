@@ -39,9 +39,9 @@ const Contact = () =>{
 
     return(
         <>
-            <div className="row w-100" >
+            <div id="contact" className="row w-100" >
                 <div className="col mt-4">
-                <img src="/talk.png" className="col" width="500" />
+                <img src="/talk.png" className="col" width="380" />
                 </div>
                <div className="col p-4">
                 <form ref={form} onSubmit={handleSubmit} >

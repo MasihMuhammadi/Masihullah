@@ -87,10 +87,12 @@
   }
   
   
-  #about,#education {
+  #about,#education,#contact {
     width: 100%;
+    /* height:100vh; */
     color: white;
     padding-top: 100px;
+    /* overflow-x: hidden; */
   }
   
   ul {
@@ -181,9 +183,9 @@
   transform:translateX(-680px);
 }
 .burger div{
-
+  margin-right:10px;
   background-color: white;
- margin-top:3px;
+  margin-top:3px;
   
 }
 .burger{
@@ -237,6 +239,9 @@
 li{
   list-style-image: url(../public/tick.png);
 }
+.projects{
+  overflow-x:hidden;
+}
 
 .skill div.progress-bar{
   background-color: rgb(5, 32, 30);
@@ -251,7 +256,7 @@ li{
   transition:transform 0.3s ease
   }
   input{
-    width:400px;
+    width:350px;
     height:40px;
     border-radius:7px;
     outline:none;
@@ -259,7 +264,7 @@ li{
     padding:3px;
   }
   textarea{
-    width:400px;
+    width:350px;
     height:120px;
     border:none;
     outline:none;

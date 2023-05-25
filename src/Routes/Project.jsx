@@ -2,13 +2,14 @@ import React,{useEffect,useState} from "react";
 
 const Project  = () =>{
     return(<>
-    <div className="pt-5">
+    <div className="pt-5 projects">
 
         <h4 className="text-light mt-5 mb-5">And here you can see some examples of my work</h4>
 <div className="container"> 
       <div className="icon-image">
         <div className="icon">
-          <img src="/buildResume.PNG" alt="" />
+        <a target="_blank" href="https://buildResume.vercel.app" > <img src="/buildResume.PNG" alt="" /></a>
+
         </div>
         <div className="hover-image one">
           <div className="img">
@@ -24,7 +25,8 @@ const Project  = () =>{
       </div>
       <div className="icon-image">
         <div className="icon">
-          <img src="/weather.PNG" alt="" />
+        <a target="_blank" href="https://weather-masih.vercel.app" > <img src="/weather.PNG" alt="" /></a>
+
         </div>
         <div className="hover-image one">
           <div className="img">
@@ -40,7 +42,8 @@ const Project  = () =>{
       </div>
       <div className="icon-image">
         <div className="icon">
-          <img src="/calculator.PNG" alt="" />
+        <a target="_blank" href="https://iphonecalculator.vercel.app" > <img src="/calculator.PNG" alt="" /></a>
+
         </div>
         <div className="hover-image one">
           <div className="img">
@@ -56,7 +59,8 @@ const Project  = () =>{
       </div>
       <div className="icon-image">
         <div className="icon">
-          <img src="/betrino.PNG" alt="" />
+        <a target="_blank" href="https://betrino.vercel.app" > <img src="/betrino.PNG" alt="" /></a>
+          
         </div>
         <div className="hover-image one">
           <div className="img">
@@ -72,7 +76,7 @@ const Project  = () =>{
       </div>
       <div className="icon-image last">
         <div className="icon">
-          <img src="/squadGame.PNG" alt="" />
+        <a target="_blank" href="https://squadGame.vercel.app" > <img src="/squadGame.PNG" alt="" /></a>
         </div>
         <div className="hover-image one">
           <div className="img">
