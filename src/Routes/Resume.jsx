@@ -22,12 +22,12 @@ const Resume = () =>{
               <ul>
                 <li>
                 <h2>Front-End Web developer</h2>
-                 <p> Remoet, Upwork</p>
+                 <p> remote, Upwork</p>
                  <p>09/2022 - 01/2023</p>
                 </li>
                 <li>
                 <h2>Persian Transcriber</h2>
-                 <p> Remoet, LOFT</p>
+                 <p> remote, LOFT</p>
                  <p>04/2022 - 08/2022</p>
                 </li>
               </ul>
