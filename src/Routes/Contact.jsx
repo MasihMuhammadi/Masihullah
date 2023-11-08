@@ -11,52 +11,58 @@ const Contact = () =>{
     const form = useRef(null);
     const [emailMessageSent,setEmailMessageSent] = useState("");    
     const [popup,setPopup] = useState("");    
+    const [isLoading,setIsLoading] = useState(true);
 
-
-    let schema = yup.object( {
-        user_email:yup.string().email('please enter a valid email').required('email is required field *'),
-        user_name:yup.string().required('name is required field *').min(3,'name must be at least 3 number').max(10,'name is too longer'),
-       user_message:yup.string().required("The message filed is required *"),
+    let schema = yup.object({
+        user_email: yup.string().email('Please enter a valid email').required('Email is a required field *'),
+        user_name: yup.string().required('Name is a required field *').min(3, 'Name must be at least 3 characters').max(10, 'Name is too long'),
+        user_message: yup.string().required("The message field is required *"),
       });
+      
 
     
       const sendEmail = () => {
-        emailjs.sendForm('service_4n10yr7', 'template_89p0tjf', form.current, 'LW3r27bFaCZINQrEn')
+        emailjs
+          .sendForm('service_4n10yr7', 'template_89p0tjf', form.current, 'LW3r27bFaCZINQrEn')
           .then(() => {
-              setEmailMessageSent('The Message Sent Successfully..!');
-            setPopup("popup-show");
+            
+            setEmailMessageSent('The Message Sent Successfully..!');
+            setPopup('popup-show');
+            
+            form.current.reset();
           })
           .catch(() => {
-              
-              setEmailMessageSent('Something Went Wrong..!');
-              setPopup("popup-show");
-            
-
+            setEmailMessageSent('Something Went Wrong..!');
+            setPopup('popup-show');
           });
       };
-      
-
-  let { values, handleChange, errors, handleSubmit, touched } = useFormik({
-    initialValues: {
-      user_name: "",
-      user_email: "",
-      user_message:"",
-    },
-    validationSchema: schema,
-    onSubmit: () => {
-      
-        sendEmail();
+    
+      let { values, handleChange, errors, handleSubmit, touched, resetForm } = useFormik({
+        initialValues: {
+          user_name: '',
+          user_email: '',
+          user_message: '',
+        },
+        validationSchema: schema,
+        onSubmit: () => {
+          sendEmail();
+   
+        },
+      });
+    
+      useEffect(() => {
+        setTimeout(() => {
+            if(emailMessageSent !== 'The Message Sent Successfully..!'){
+                setPopup('popup');
+            }else{
+                
+                resetForm();
+                setPopup('popup');
+            }
+        }, 5000);
         
-      },
-      
-  });
-  useEffect(() =>{
-      setTimeout(() =>{
-            form.current.reset();
-            setPopup("popup");
-
-        },5000)
-  },[popup])
+      }, [popup]);
+    
   
         
 
@@ -82,11 +88,17 @@ const Contact = () =>{
 
                 </div>
                 <div className='form-group'>
-                    <label htmlFor="message" className='text-light'>message*</label><br />
-                        <textarea placeholder="we Love you" name="message" className="p-2" id="message"/><br />
+                    <label htmlFor="user_message" className='text-light'>Message *</label><br />
+                    <textarea onChange={handleChange} value={values.user_message} type="text" id="user_message" name="user_message" className="contact-input" ></textarea><br />
                         {errors.user_message && touched.user_message && <small style={{color:"rgb(110, 4, 4) "}}>{errors.user_message}</small>}
-                </div> 
-                <button type="submit" className="btn btn-sm d-block btn-outline-light">Send Message</button>
+
+                </div>
+   
+
+                <button type="submit" className="btn btn-sm d-block  btn-outline-light">
+                Send Email
+                </button>
+
 
 
                     <div className='icons d-flex flex-row '>
@@ -98,7 +110,7 @@ const Contact = () =>{
                 </form>
                 </div>
             </div>
-                <div className={`${popup} bg-dark ${emailMessageSent == 'The Message Sent Successfully..!' ? "text-success " : "text-danger"} `}>
+                <div className={`${popup} bg-light ${emailMessageSent == 'The Message Sent Successfully..!' ? "text-success " : "text-danger"} `}>
                     <p>{emailMessageSent}</p>
                 </div>
         </>
