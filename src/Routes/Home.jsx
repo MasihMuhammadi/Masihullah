@@ -24,10 +24,10 @@ const Home = () => {
           <p className="bio">
             My name is <span id="name">Masihullah</span>
           </p>
-          <div className="">
-            <p className="bio">
+          <div className="bio">
+            
               <TypingAnimation />
-            </p>
+          
             <h5>I'm a seasoned Frontend Web Developer with over 2 years of experience.</h5>
           </div>
         </div>

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "bootstrap": "^5.2.3",
     "emailjs": "^4.0.2",
     "emailjs-com": "^3.2.0",
