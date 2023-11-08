@@ -1,19 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../assets/Navbar";
+
 import TypingAnimation from "../TypingAnimation";
 
 const Home = () => {
-  const [myPhoto, setMyPhoto] = useState("/smile.png");
+  
 
-  const showMyFace = () => {
-    setMyPhoto("/sticker.png");
-  };
 
-  const hideMyFace = () => {
-    setMyPhoto("/smile.png");
-   
-  };
+
 
   return (
     <>
@@ -21,11 +13,10 @@ const Home = () => {
         <div className="col-lg-6 order-lg-1">
          
           <img
-            src={ myPhoto}
+            src="/smile.png"
             width="500"
             height="500"
-            onMouseOver={showMyFace}
-            onMouseOut={hideMyFace}
+          
             alt="My Photo"
           />
         </div>
@@ -37,7 +28,7 @@ const Home = () => {
             <p className="bio">
               <TypingAnimation />
             </p>
-            <p>I am Full stack web developer with 1+ year experience in Front-end web development</p>
+            <h5>I'm a seasoned Frontend Web Developer with over 2 years of experience.</h5>
           </div>
         </div>
       </div>

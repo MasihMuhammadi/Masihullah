@@ -1,7 +1,7 @@
-import React,{useState,useEffect,useRef} from 'react';
+import {useRef} from 'react';
 import emailjs from 'emailjs-com'
 import * as yup from 'yup';
-import { Form } from 'formik';
+
 import { useFormik } from 'formik';
 
 
@@ -39,12 +39,14 @@ const Contact = () =>{
 
     return(
         <>
-            <div id="contact" className="row w-100" >
+            <div id="contact" className="" >
+                
+                <div className="row w-100">
                 <div className="col mt-4">
-                <img src="/talk.png" className="col" width="380" />
+                <img src="/call me.png" className="col" width="380" />
                 </div>
                <div className="col p-4">
-                <form ref={form} onSubmit={handleSubmit} >
+                <form ref={form}  >
                 <div className='form-group'>
                     <label htmlFor="user_name" className='text-light'>Name*</label><br />
                     <input onChange={handleChange} value={values.user_name} type="text" id="user_name" name="user_name" className="contact-input" />
@@ -62,15 +64,16 @@ const Contact = () =>{
                     <label htmlFor="message" className='text-light'>message*</label><br />
                         <textarea placeholder="we Love you" name="message" className="p-2" id="message"/>
                 </div> 
-                <input type="submit" className="btn btn-sm d-block btn-outline-light" value="Send Message"/>
+                <input type="submit" onClick={handleSubmit} className="btn btn-sm d-block btn-outline-light" value="Send Message"/>
 
                     <div className='icons d-flex flex-row '>
-                        <a  target="_blank" className="mt-4" href="https://wa.me/+93749102015" ><img className="mx-3" src="../whatsapp.png" /></a> 
-                        <a  target="_blank" className="mt-4" href="https://www.github.com/MasihMuhammadi" ><img className="mx-3" src="../github.png" /></a>  
-                        <a  target="_blank" className="mt-4" href="https://www.instagram.com/im.masih_muhammadi/"><img className="mx-3" src="../instagram.png" /></a>     
-                        <a  target="_blank" className="mt-4" href="https://www.linkedin.com/in/masihullah-muhammadi-794964257/"><img className="mx-3" src="../linkedin.png" /></a> 
+                        <a  target="_blank" rel="noreferrer" className="mt-4" href="https://wa.me/+93749102015" ><img className="mx-3" src="../whatsapp.png" /></a> 
+                        <a  target="_blank" rel="noreferrer" className="mt-4" href="https://www.github.com/MasihMuhammadi" ><img className="mx-3" src="../github.png" /></a>  
+                        <a  target="_blank" rel="noreferrer" className="mt-4" href="https://www.instagram.com/im.masih_muhammadi/"><img className="mx-3" src="../instagram.png" /></a>     
+                        <a  target="_blank" rel="noreferrer" className="mt-4" href="https://www.linkedin.com/in/masihullah-muhammadi-794964257/"><img className="mx-3" src="../linkedin.png" /></a> 
                     </div>
                 </form>
+                </div>
                 </div>
             </div>
         </>

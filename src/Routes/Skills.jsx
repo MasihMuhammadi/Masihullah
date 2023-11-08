@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef } from 'react';
+import  {useState, useEffect } from 'react';
 
 const Skills = () => {
 
@@ -105,7 +105,7 @@ const Skills = () => {
     return (<div className="overflow-x-sm-hidden">
     <div className="row pt-5 w-100 text-light fw-bold " id='skills '>
         <div className="col ">
-            <img src="/read.png" width="400" />
+            <img src="/laptop reading.png" width="400" />
         </div>
         <div className="mx-5 col w-100 progresses">
                 HTML, Css & Bootstrap 

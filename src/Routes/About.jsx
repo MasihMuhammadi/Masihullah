@@ -1,40 +1,53 @@
-import React,{useEffect,useState} from "react";
+
 
 const About  = () =>{
+
+        const downloadCv = () => {
+            
+                const pdfURL = '/MyFile.pdf';
+            
+                const link = document.createElement('a');
+                link.href = pdfURL;
+                link.download = 'Masih-cv.pdf';
+                link.click();
+              };
     return(<>
-    <div id="about" className="row ">
-        <h5>Do You wan't to know more About me..?</h5>
-            <div class="col-sm-12 col-md-4 mt-4 mb-4">
+    <div id="about" className="">
+        <h2>Get to Know Me</h2>
+        <div className="row mt-5">
+            <div className="col-sm-12 col-md-4">
             <div className="cards " >
-                    <img src='/education.png'  />
-                    <h5>Web development</h5>
+                    <img src='/laptop wave.png' className="text-center" />
+                    <h5>Front-End Web development</h5>
                     <p>
-                    I'm driven by a passion for originality, purpose, and optimization in creating outstanding web applications. My focus is on developing innovative websites that meet user needs with intuitive interfaces and engaging content, leaving a lasting impact.
+                    I'm a skilled Frontend Web Developer with 2+ years of experience, dedicated to creating visually stunning and user-friendly websites. My portfolio reflects a commitment to blending design and technology for exceptional web experiences
                     </p>
                     </div>
             </div>
-            <div class="col-sm-12 col-md-4">
-            <div className="cards-b mt-sm-5" >
-                    <img className="icon" src='/painting.png'  />
-                    <h5>Graphic Design </h5>
+            <div className="col-sm-12 col-md-4">
+            <div className="cards " >
+                    <img src='/sleep glasses.png' className="text-center" />
+                    <h5>Front-End Web development</h5>
                     <p>
-                    I'm passionate about crafting original, purposeful interfaces. My goal is to develop innovative websites and applications that seamlessly blend functionality and aesthetics, ensuring exceptional user experiences that meet their needs.
+                    I'm a skilled Frontend Web Developer with 2+ years of experience, dedicated to creating visually stunning and user-friendly websites. My portfolio reflects a commitment to blending design and technology for exceptional web experiences
                     </p>
                     </div>
-
             </div>
-            <div class="col-sm-12 col-md-4 mt-4">
+            
+                
+            <div className="col-sm-12 col-md-4 ">
             <div className="cards" >
-                    <img src='/taking a photo.png'  />
-                    <h5>Photo Grapher</h5>
-                    <p>
-                    I'm fueled by a passion for capturing moments with originality, purpose, and artistic precision. My focus is on creating stunning photographs that resonate with viewers, showcasing intuitive compositions, and evoking a lasting impact through engaging visual storytelling.
+                    <img src='/design.png'  />
+                    <h5>UI Designer</h5>
+                    <p>I'm a UI Designer passionate about crafting intuitive and visually captivating user interfaces. My work combines artistry and usability, leaving a lasting impact through purposeful compositions and engaging storytelling..
                     </p>
-                    </div>
+                    </div>      
+         </div>
+         <button className="btn mx-2 mt-3 d-block text-center " style={{background:"white",color:"rgb(5, 32, 30)", width:"200px", textAlign:"center"}} onClick={downloadCv}>Download Resume</button>
+
+        </div>
     </div>
 
-  
-    </div>
     </>)
 }
 export default About;
